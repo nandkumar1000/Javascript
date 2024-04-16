@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- create, remove, update, delete operation -->
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <!-- <h1>nand kumar sahu</h1> -->
+        <input type="text" id="input">
+        <button class="btn">click me</button>
+        <div class="myclass">
+            <p></p>
+            <p></p>
+            <p></p>
+        </div>
+    </div>
+    <script>
+        let inputElem = document.getElementById("input");
+        let clickBtn = document.querySelector(".btn");
+        let myclass = document.querySelector(".myclass");
+
+        const addmyclass = () => {
+            console.log(inputElem.value);
+            let pElem = document.createElement("p");
+            pElem.textContent = inputElem.value;
+            console.log(pElem);
+            myclass.append(pElem);
+            inputElem.value = "";
+        };
+
+        clickBtn.addEventListener("click", () => { 
+            addmyclass();
+        });
+
+        myclass.addEventListener('click', (event) => {
+            console.log(event.target);
+            let currentElem = event.target;
+            currentElem.remove();
+        });
+    </script>
+</body>
+</html>

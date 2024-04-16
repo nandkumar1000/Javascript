@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document </title>
+    <!-- searching in Dom -->
+</head>
+<body>
+    <div>
+        <h1 id="heading"> DOM API</h1>
+        <ul class="list-of--nodes">
+            <li>1 node</li>
+            <li>2 node</li>
+            <li>3 node</li>
+            <li>4 node</li>
+            <li style="display: none">s node</li>
+        </ul>
+    </div>
+    <div>
+       <button>click me</button>
+       <div class="value"></div>
+    </div>
+    <script>
+        let findElementById=document.getElementById("heading");
+        console.log(findElementById);
+        console.log(findElementById.innerHTML);
+        console.log(findElementById.innerText);
+        console.log(findElementById.textContent);
+        const findElementByClassName=document.getElementsByClassName("list-of--nodes");
+        console.log(findElementByClassName);
+        // if we want to see the data of the  html element then we use spread operator(...)
+        console.log(...findElementByClassName);
+        // using for of loop by which iterate;
+        for(let elem of findElementByClassName){
+            console.log(elem.innerHTML);
+            console.log(elem.innerText);
+            console.log(elem.textContent);
+        }
+        // element acces by the help of tag names;
+        let findElementsByTagName=document.getElementsByTagName("li");
+        console.log(findElementsByTagName);
+        console.log(findElementsByTagName.innerHTML);
+        console.log(findElementsByTagName.innerText);
+        console.log(findElementsByTagName.textContent);
+        const findElementByTagName=document.getElementsByTagName("li");
+        console.log(findElementByTagName);
+        // if we want to see the data of the  html element then we use spread operator(...)
+        console.log(...findElementByTagName);
+        // using for of loop by which iterate;
+        for(let elem of findElementByTagName){
+            // console.log(elem.innerHTML);
+            // console.log(elem.innerText);
+            // console.log(elem.textContent);
+            console.log(name);
+        }
+        // with the help of query selector;
+        const findElementByqueryselector=document.queryselector("#heading");
+        console.log(findElementByqueryselector.innerHTML="nand kumar sahu");
+        // for all li access we use query selector all;
+        const findElementByqueryselectorAll=document.queryselectorAll("li");
+        console.log(findElementByqueryselectorAll);
+    </script>
+</body>
+</html>
