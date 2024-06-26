@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Element Example</title>
+</head>
+<body>
+    <div id="container">
+        <!-- New elements will be added here -->
+    </div>
+
+    <script>
+        // Create a new <p> element
+        const newParagraph = document.createElement('p');
+        
+        // Set the text content of the new <p> element
+        newParagraph.textContent = 'Hello, this is a dynamically created paragraph!';
+        
+        // Optionally, set an attribute (e.g., class)
+        newParagraph.setAttribute('class', 'my-paragraph');
+
+        // Get the container element where the new paragraph will be appended
+        const container = document.getElementById('container');
+        
+        // Append the new <p> element to the container
+        container.appendChild(newParagraph);
+    </script>
+</body>
+</html>
